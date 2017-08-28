@@ -8,14 +8,14 @@ trait Damage[M,P] extends ((M,P) => P)
 trait Heal[M,P] extends ((M,P) => P)
 
 
-case class DealInteraction(amountOfInteraction : Int )
+case class DealInteraction( amountOfInteraction : Int )
 case class Person( name: String, health : Int = 1000, level : Int = 1, alive : Boolean = true ){
 
-  def callDamageOn( person: Person, measureInteraction: DealInteraction)(implicit damageAction : Damage[DealInteraction,Person] ): Person ={
+  def callDamageOn( person: Person, measureInteraction: DealInteraction )( implicit damageAction : Damage[DealInteraction,Person] ): Person ={
     damageAction( measureInteraction, person )
   }
 
-  def callHealOn( person: Person, measureInteraction: DealInteraction)(implicit healAction : Heal[DealInteraction,Person] ): Person ={
+  def callHealOn( person: Person, measureInteraction: DealInteraction )( implicit healAction : Heal[DealInteraction,Person] ): Person ={
     healAction( measureInteraction, person )
   }
 }
@@ -24,7 +24,7 @@ case class Person( name: String, health : Int = 1000, level : Int = 1, alive : B
 object Damage{
   implicit object DamageCharacter extends Damage[DealInteraction,Person] {
     override def apply(measureInteraction: DealInteraction, person: Person): Person = {
-      isPersonAlive( substractHealth( person, measureInteraction) )
+      isPersonAlive( substractHealth( person, measureInteraction ) )
     }
   }
 
@@ -94,12 +94,11 @@ object PersonInteraction{
 
 object mainClass{
   def main(args: Array[String]): Unit = {
-     import PersonInteraction._
+    import PersonInteraction._
     val p1 = Person("p1")
     var p2 = Person("p2")
     //p2 = logging( p1,"Damage", p2, DealInteraction(200), callDamage )
     logging( p1,"Heal", logging( p1,"Damage", p2, DealInteraction(1000), callDamage ), DealInteraction(200), callHeal )
-
   }
 }
 

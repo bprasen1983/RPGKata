@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/combatApp.iml" filepath="$PROJECT_DIR$/.idea/modules/combatApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/combatApp-build.iml" filepath="$PROJECT_DIR$/.idea/modules/combatApp-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/damageApp.iml" filepath="$PROJECT_DIR$/.idea/modules/damageApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/damageApp-build.iml" filepath="$PROJECT_DIR$/.idea/modules/damageApp-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/healApp.iml" filepath="$PROJECT_DIR$/.idea/modules/healApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/healApp-build.iml" filepath="$PROJECT_DIR$/.idea/modules/healApp-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpgkata.iml" filepath="$PROJECT_DIR$/.idea/modules/rpgkata.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/rpgkata-build.iml" filepath="$PROJECT_DIR$/.idea/modules/rpgkata-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utilities.iml" filepath="$PROJECT_DIR$/.idea/modules/utilities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/utilities-build.iml" filepath="$PROJECT_DIR$/.idea/modules/utilities-build.iml" />
     </modules>
   </component>
 </project>
