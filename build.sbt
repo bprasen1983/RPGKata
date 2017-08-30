@@ -23,9 +23,11 @@ lazy val utilities = (project in file ("RPGUtilities"))
 
 lazy val damageApp = (project in file ("DamageHealthApplication"))
   .dependsOn( utilities ).aggregate( utilities)
+  .settings(commonSettings :_*)
 
 lazy val healApp = (project in file ("HealHealthApplication"))
   .dependsOn( utilities ).aggregate( utilities)
+  .settings(commonSettings :_*)
 
 lazy val combatApp = (project in file ("CombatApplication"))
   .dependsOn(healApp, damageApp, utilities)
